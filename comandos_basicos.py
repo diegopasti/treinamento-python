@@ -32,5 +32,7 @@ while soma < 10:
     print("SOMA:", soma)
 
 print("ENFIM, SAI DESSE LOOP")
+print("Ölar!")
+
 
 
