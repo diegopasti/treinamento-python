@@ -22,7 +22,8 @@ Feature: Controle de Pagamentos
 
 """
 from materiais.estruturas_dados import dados_funcionario
-from materiais.estruturas_repeticao import limpar_tela, exibir_funcionarios, buscar_funcionario
+from materiais.estruturas_repeticao import limpar_tela, exibir_funcionarios, buscar_funcionario, exibir_menu, \
+    alterar_funcionario
 
 funcionarios = [
     {'nome': 'DIEGO PASTI', 'idade': '32', 'cargo': 'DEV'},
@@ -31,17 +32,12 @@ funcionarios = [
     {'nome': 'AMANDA SOUZA', 'idade': '23', 'cargo': 'DESIGN'},
 ]
 
-opcao = ""
-while opcao != "0":
-    limpar_tela()
-    print("1 - Visualizar Funcionários")
-    print("2 - Adicionar Funcionário")
-    print("3 - Pesquisar Funcionários")
-    print("4 - Alterar Funcionário")
-    print("5 - Excluir Funcionário")
-    print("0 - Sair")
-    print("")
-    opcao = input("Digite a opção desejada:")
+while True:
+    opcao = exibir_menu()
+
+
+    if opcao == "0":
+        break
 
     if opcao == "1":
         print("Vamos visualizar funcionarios")
@@ -55,10 +51,12 @@ while opcao != "0":
     if opcao == "3":
         print("Vamos pesquisar um funcionário")
         nome = input("Digite o nome do funcionario:")
-        buscar_funcionario(funcionarios, nome)
+        exibir_funcionarios(funcionarios)
 
     if opcao == "4":
         print("Vamos alterar funcionario")
+        alterar_funcionario(funcionarios)
+        exibir_funcionarios(funcionarios)
 
     if opcao == "5":
         print("Vamos excluir funcionario")
