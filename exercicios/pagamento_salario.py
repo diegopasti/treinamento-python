@@ -21,8 +21,7 @@ Feature: Cadastro de Cargos
 Feature: Controle de Pagamentos
 
 """
-from materiais.estruturas_dados import dados_funcionario
-from materiais.estruturas_repeticao import limpar_tela, exibir_funcionarios, buscar_funcionario
+from exercicios.estruturas_repeticao import limpar_tela, exibir_funcionarios, buscar_funcionario
 
 funcionarios = [
     {'nome': 'DIEGO PASTI', 'idade': '32', 'cargo': 'DEV'},
@@ -30,6 +29,15 @@ funcionarios = [
     {'nome': 'PAULO FERNANDES', 'idade': '51', 'cargo': 'GESTOR'},
     {'nome': 'AMANDA SOUZA', 'idade': '23', 'cargo': 'DESIGN'},
 ]
+
+
+def dados_funcionario():
+    funcionario = {}
+    funcionario["nome"] = input("Digite o nome do funcionário:")
+    funcionario["idade"] = input("Digite a idade do funcionário:")
+    funcionario["cargo"] = input("Digite o cargo do funcionário:")
+    return funcionario
+
 
 opcao = ""
 while opcao != "0":
