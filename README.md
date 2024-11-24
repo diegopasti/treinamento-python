@@ -4,7 +4,7 @@ Repositório para integração de arquivos para o treinamento em Python
 
 ### PARTE I
 
-### [1. Conhecendo o Python](https://website-name.com)
+### [1. Conhecendo o Python](https://github.com/diegopasti/treinamento-python/blob/develop/conteudos/python/basico/introducao/conhecendo_o_interpretador.MD)
 
 ### 1.1. Executando o interpretador
 ### 1.2. Executando scripts no interpretador
